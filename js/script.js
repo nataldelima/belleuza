@@ -19,3 +19,17 @@ testimonialDots.forEach(dot => {
         dot.classList.add('active');
     });
 });
+
+// Troca automática dos depoimentos
+let currentSlide = 0;
+function changeSlide() {
+    testimonialDots.forEach(d => d.classList.remove('active'));
+    testimonials.forEach(t => t.classList.remove('active'));
+
+    currentSlide = (currentSlide + 1) % testimonials.length;
+
+    testimonialDots[currentSlide].classList.add('active');
+    testimonials[currentSlide].classList.add('active');
+}
+
+setInterval(changeSlide, 5000);
