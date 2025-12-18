@@ -57,6 +57,15 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+}
+
+.logo-link {
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+    color: var(--rosa);
 }
 
 .logo h1 {
