@@ -204,3 +204,73 @@ nav ul li a:hover {
     margin-bottom: 15px;
     color: var(--roxo-claro);
 }
+
+/* Depoimentos */
+.testimonials {
+    padding: 100px 0;
+    background-color: var(--branco);
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial {
+    background-color: var(--bege-claro);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--sombra);
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.client-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background-color: var(--rosa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: var(--branco);
+}
+
+.client-text {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.client-name {
+    font-weight: 600;
+    color: var(--roxo-claro);
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--rosa);
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.slider-dot.active {
+    opacity: 1;
+}
