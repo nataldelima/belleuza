@@ -149,6 +149,69 @@
         </div>
     </section>
 
+    <!-- Contato e Mapa -->
+    <section class="contact-map" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Entre em Contato</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="limpeza">Limpeza de Pele Profunda</option>
+                                <option value="preenchimento">Preenchimento Facial</option>
+                                <option value="depilacao">Depilação a Laser</option>
+                                <option value="massagem">Massagem Relaxante</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message"
+                                placeholder="Conte-nos como podemos ajudá-la..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <div class="map-section">
+                    <h3>Onde Estamos</h3>
+                    <div class="map-container">
+                        <div id="map">
+                            <!-- Mapa será inserido via JavaScript -->
+                            <div
+                                style="width: 100%; height: 100%; background-color: var(--bege-claro); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px; text-align: center;">
+                                <i class="fas fa-map-marker-alt"
+                                    style="font-size: 48px; color: var(--rosa); margin-bottom: 15px;"></i>
+                                <p><strong>BellElza Clínica de Estética</strong></p>
+                                <p>Av. das Flores, 123 - Jardim Primavera</p>
+                                <p>São Paulo - SP</p>
+                                <p>CEP: 01234-567</p>
+                                <p style="margin-top: 20px;">Horário de funcionamento:</p>
+                                <p>Segunda a Sexta: 9h às 19h</p>
+                                <p>Sábado: 9h às 14h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="js/script.js"></script>
 </body>
 
