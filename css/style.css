@@ -170,13 +170,67 @@ nav ul li a:hover {
     background-color: var(--rosa);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+.services {
+    position: relative;
 }
 
+.scroll-hint {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--rosa);
+    font-size: 24px;
+    animation: bounce 2s infinite;
+    display: none;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    40% {
+        transform: translateY(-50%) translateX(-5px);
+    }
+
+    60% {
+        transform: translateY(-50%) translateX(-3px);
+    }
+}
+
+
+.services-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rosa) var(--bege-claro);
+    -webkit-overflow-scrolling: touch;
+    /* Suave no iOS */
+}
+
+.services-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.services-grid::-webkit-scrollbar-track {
+    background: var(--bege-claro);
+    border-radius: 10px;
+}
+
+.services-grid::-webkit-scrollbar-thumb {
+    background: var(--rosa);
+    border-radius: 10px;
+}
+
+
 .service-card {
+    flex: 0 0 auto;
+    width: 280px;
+    /* Largura fixa para os cards */
     background-color: var(--branco);
     border-radius: 10px;
     overflow: hidden;
@@ -425,14 +479,37 @@ footer {
         font-size: 40px;
     }
 
-    contact-container {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        overflow-x: visible;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        width: auto;
+    }
+
+    .contact-container {
         grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .map-section {
+        order: 2;
+    }
+
+    .contact-form {
+        order: 1;
     }
 
     .map-container {
         height: 400px;
     }
 
+    .scroll-hint {
+        display: block;
+    }
 }
 
 @media (max-width: 768px) {
@@ -493,6 +570,20 @@ footer {
     .section-title h2 {
         font-size: 30px;
     }
+
+    .contact-container {
+        gap: 30px;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+
+    .contact-form h3,
+    .map-section h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -523,5 +614,15 @@ footer {
         font-size: 26px;
         bottom: 20px;
         right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        height: 300px;
+    }
+
+    .contact-form {
+        padding: 0 10px;
     }
 }
